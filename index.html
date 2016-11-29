@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="workerlistapp">
+<head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+</head>
+<body ng-controller="workerController">
+    <div class="page-header">
+        <h1> List of workers </h1>
+    </div>
+    <div class="panel">
+        <div class="form-inline">
+            <div class="form-group">
+                <div class="col-md-8 move">
+                    <input class="form-control" ng-model="text" placeholder = "Filter" />
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in Data | filter : text" ng-click="ShowCurrent(item)">
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td> 
+                    <td>{{item.username}}</td>  
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  <div class="modal_back" ng-click="hide()">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" ng-click="hide()">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" ng-click="hide()">Close</button>
+        </div>
+      </div>      
+    </div>
+  </div>
+ 
+<script src="js/angular.min.js"></script>
+<script src="js/list.js"></script>
+<script>
+
+</script>
+</body>
+</html>
