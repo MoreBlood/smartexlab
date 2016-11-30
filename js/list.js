@@ -18,17 +18,19 @@ var workerlistapp = angular.module("workerlistapp", []);
             return null;
         }
 
-        var pop = angular.element(document.querySelector(".modal_back")),
-        pop_text = angular.element(document.querySelector(".modal-body")),
-        pop_title = angular.element(document.querySelector(".modal-title"));
+        var pop  = {
+        window : angular.element(document.querySelector(".modal_back")),
+        text : angular.element(document.querySelector(".modal-body")),
+        title : angular.element(document.querySelector(".modal-title"))
+        };
       
         $scope.ShowCurrent = function (element){
 
             try{
 
-                pop.addClass("visible-modal");
-                pop_title.html(element.name);
-                pop_text.html( "<b>Website: </b>" + '<a href ="http://'+ element.website + '">' + element.website + "</a>" + "<br>"+
+                pop.window.addClass("visible-modal");
+                pop.title.html(element.name);
+                pop.text.html( "<b>Website: </b>" + '<a href ="http://'+ element.website + '">' + element.website + "</a>" + "<br>"+
                                 "<b>Phone: </b>" + element.phone + "<br>"+
                                 "<b>Company: </b>" +  element.company.name + "<br>"+
                                 "<i>" + element.company.catchPhrase + "<br>"+
@@ -41,14 +43,14 @@ var workerlistapp = angular.module("workerlistapp", []);
             }
             catch(e){
 
-                if (e.name == "TypeError") pop_text.html("No such data...");
+                if (e.name == "TypeError") pop.text.html("No such data...");
                 else console.log(e);
             }
         }
 
         $scope.hide = function (){
 
-            pop.removeClass("visible-modal");
+            pop.window.removeClass("visible-modal");
             $location.url(""); // clear url if closed
             document.title = "Workers";
         };
