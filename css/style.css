@@ -15,11 +15,11 @@
     opacity: 0;    
 }
 .move, .page-header{
-		padding-left: 5px;
+	padding-left: 5px;
 }
 .visible-modal{
-        visibility: visible;
-        opacity: 1;        
+    visibility: visible;
+    opacity: 1;        
     }
 .close-background{
     position: fixed;
