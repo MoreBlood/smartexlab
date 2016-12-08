@@ -1,6 +1,6 @@
-function workerDetailController($scope, $location) 
+function workerDetailController($scope, $location)
 {
-        var window = angular.element(document.querySelector(".modal_back"));      
+        var window = angular.element(document.querySelector(".modal_back"));     
 
         $scope.$on('showWorker', function(event, element)
         {
@@ -31,6 +31,6 @@ angular.module('workerlistapp').directive('workerinfo', function() {
 
   return {
 
-    templateUrl: 'workerinfo.html'
+    templateUrl: 'worker_info.html'
   }
 });

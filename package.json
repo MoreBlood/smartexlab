@@ -1,0 +1,23 @@
+{
+  "name": "smartexlab",
+  "version": "1.0.0",
+  "description": "Clone it or download `*.zip` file. Open  `index.html` in your web browser.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoreBlood/smartexlab.git"
+  },
+  "author": "MoreBlood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoreBlood/smartexlab/issues"
+  },
+  "homepage": "https://github.com/MoreBlood/smartexlab#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1"
+  }
+}
