@@ -12,3 +12,5 @@ and then all needed plugins
 
 * Then run `gulp` from project folder, that command will run **clean** task and **default** task
 * App wiil appear in `build` folder
+
+<img src="http://i.imgur.com/SAebZzq.png" width="90%">
